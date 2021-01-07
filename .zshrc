@@ -20,9 +20,21 @@ fi
 precmd () { vcs_info }
 PROMPT='%F{5}[%F{2}%n%F{5}] %F{3}%3~ ${vcs_info_msg_0_} %f%# '
 
-# Enables git completion. Download @ https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash 
+# GIT COMPLETION
 
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
+# Create the folder structure
+# mkdir -p ~/.zsh
+# cd ~/.zsh
+
+# Then download the scripts
+# curl -o git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+# curl -o _git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
+
+if [ -d ~/.zsh ]; then
+  # Load Git completion
+  zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+  fpath=(~/.zsh $fpath)
+
+  autoload -Uz compinit && compinit
 fi
 
