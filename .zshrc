@@ -38,3 +38,8 @@ if [ -d ~/.zsh ]; then
   autoload -Uz compinit && compinit -u
 fi
 
+# auto suggestions
+# to download, run: git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions/
+if [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
