@@ -19,3 +19,10 @@ fi
 
 precmd () { vcs_info }
 PROMPT='%F{5}[%F{2}%n%F{5}] %F{3}%3~ ${vcs_info_msg_0_} %f%# '
+
+# Enables git completion. Download @ https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash 
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
