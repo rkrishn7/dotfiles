@@ -116,7 +116,12 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffff00,bg=bold"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# use nvm if .nvmrc exists
+[ -f ".nvmrc" ] && nvm use
+
 source /Users/rogrx/Documents/rewards/.rewards
+# handy aliases
 alias v=vim
 alias k=kubectl
 alias kns=kubens
