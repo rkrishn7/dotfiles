@@ -1,6 +1,6 @@
 # dotfiles
 
-This repository contains various configuratio files that I use across my systems.
+This repository contains various configuration files that I use across my systems.
 
 ## Usage
 
