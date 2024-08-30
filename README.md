@@ -17,3 +17,12 @@ Or, to symlink everything, run:
 ```bash
 stow */ # (ignores README.md)
 ```
+
+## Homebrew
+
+To install homebrew dependencies, run the following commands:
+
+```bash
+stow brew
+brew bundle install --global
+```
